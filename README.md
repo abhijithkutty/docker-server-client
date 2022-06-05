@@ -19,7 +19,7 @@
 
 4) **Connect to master container.**
 
-   >docker exec -it <ansible container id> bash
+   >docker exec -it ansible bash
    
    
 
