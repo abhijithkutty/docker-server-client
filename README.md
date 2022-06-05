@@ -1,26 +1,34 @@
 # docker-server-client
 
-1) Prerequisites:
+1) **Prerequisites:**
 
    Install docker and docker compose packages.
 
-2) Run below docker-compose commands to build and run the Ansible master and client container.
+2) **Run below docker-compose commands to build and run the Ansible master and client container.**
 
-   docker-compose build
+   >docker-compose build
 
-   docker-compose up -d
-
-3) Ensure that Ansible master and remote host containers are running.
+   >docker-compose up -d
    
-   docker ps
+   ![image](https://user-images.githubusercontent.com/52773558/172063612-4f72350f-bc97-4887-a00c-d01df4486088.png)
 
-4) Connect to master container.
 
-   docker exec -it <ansible container id> bash
+3) **Ensure that Ansible master and remote host containers are running.**
+   
+   >docker ps
 
-5) Run Ansible Adhoc command.
+4) **Connect to master container.**
+
+   >docker exec -it <ansible container id> bash
+   
+   
+
+5) **Run Ansible Adhoc command.**
     
-   ansible host -m setup
+   >ansible host -m ping
+   
+   ![image](https://user-images.githubusercontent.com/52773558/172063778-5f900e4f-072a-4b32-892d-dac48d696cae.png)
+
 
 
 
