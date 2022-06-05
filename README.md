@@ -7,6 +7,7 @@
 2) Run below docker-compose commands to build and run the Ansible master and client container.
 
    docker-compose build
+
    docker-compose up -d
 
 3) Ensure that Ansible master and remote host containers are running.
