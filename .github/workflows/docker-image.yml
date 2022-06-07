@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the master image
+      run: |
+          docker build . --file Dockerfile --tag ansible:$(date +%s)
+    - name: Build the client image
+      run: |
+          docker build ./client --file Dockerfile --tag remote-host-ssh:$(date +%s)
+          
+      
