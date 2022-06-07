@@ -24,11 +24,11 @@ jobs:
           
     - name: Build the master image
       run: |
-          docker build . --file Dockerfile --tag ansible:v1.0
+          docker build . --file Dockerfile --tag abhijithkandankutty/ansible:v1.0
           
     - name: Build the client image
       run: |
-          docker build ./client --file Dockerfile --tag remote-host-ssh:V1.0
+          docker build ./client --file Dockerfile --tag abhijithkandankutty/remote-host-ssh:V1.0
           
     - name: Docker image push in DockerHub
       run: |
