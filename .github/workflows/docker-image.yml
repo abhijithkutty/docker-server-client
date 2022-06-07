@@ -32,7 +32,7 @@ jobs:
           
     - name: Docker image push in DockerHub
       run: |
-           docker push ansible:v1.0
-           docker push remote-host-ssh:V1.0
+           docker push abhijithkandankutty/ansible:v1.0
+           docker push abhijithkandankutty/remote-host-ssh:V1.0
           
       
