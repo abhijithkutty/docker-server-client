@@ -30,4 +30,9 @@ jobs:
       run: |
           docker build ./client --file Dockerfile --tag remote-host-ssh:$(date +%s)
           
+    - name: Docker image push in DockerHub
+      run: |
+           docker push ansible:$(date +%s)
+           docker push remote-host-ssh:$(date +%s)
+          
       
